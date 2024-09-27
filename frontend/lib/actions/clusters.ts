@@ -18,8 +18,7 @@ export async function naiveRecAlgo(currentClusters: any[], n: number) {
   const { data: userData, error: userError } = await supabase
     .from("profiles")
     .select("views")
-    .eq("id", userdat?.user?.id)
-    .single();
+    .eq("id", userdat?.user?.id);
 
   console.log(usererr, userData);
 
@@ -116,8 +115,7 @@ export async function getClusterById(id: string) {
   const { data, error } = await supabase
     .from("clusters")
     .select("*")
-    .eq("id", id)
-    .single();
+    .eq("id", id);
 
   console.log(data);
 
@@ -136,8 +134,7 @@ async function updateUserArrayColumn(columnName: string, id: string) {
   const { data, error } = await supabase
     .from("profiles")
     .select(columnName)
-    .eq("id", userId)
-    .single();
+    .eq("id", userId);
   console.log("DATA", data);
   if (error) {
     throw new Error(error.message);
@@ -173,8 +170,7 @@ export async function getArticleById(id: string) {
   const { data, error } = await supabase
     .from("articles")
     .select("*")
-    .eq("id", id)
-    .single();
+    .eq("id", id);
 
   if (error) throw new Error(error.message);
   return data;

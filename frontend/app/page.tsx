@@ -1,4 +1,4 @@
-import Globe from "@/components/globe";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,7 +19,7 @@ export default function Home() {
           // className="w-full max-w-2xl"
           alt="Landing page"
         />
-        <Link href="/news/15db7a48-eaca-42b8-b3f9-1e11cef77792" passHref>
+        <Link href="/news/2b1e8dc7-236b-4047-9cf1-89917bfb28d2" passHref>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">
             Jump into the VeriScope
           </button>
@@ -51,7 +51,7 @@ export default function Home() {
                 <div className="font-bold text-lg">Avoid Misinformation.</div>
                 <div>
                   Our AI agent is trained to curate in-demand content for you in
-                  a reliable, unpolarized manner. Don't be fooled by biased news
+                  a reliable, unpolarized manner. Don't be biased by fake news
                   anymore.
                 </div>
               </div>

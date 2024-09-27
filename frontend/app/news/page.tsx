@@ -7,7 +7,7 @@ export default function Page() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/news/15db7a48-eaca-42b8-b3f9-1e11cef77792');
+    router.push('/news/2b1e8dc7-236b-4047-9cf1-89917bfb28d2');
   }, [router]);
 
   return null; // Render nothing or a loading indicator while redirecting

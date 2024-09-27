@@ -33,11 +33,25 @@ export function SignupForm({ className, ...props }: SignupFormProps) {
   async function onSubmit() {
     setIsLoading(true);
 
+    // Validation for email and password
+    if (!email) {
+      toast.error("Please enter your email.");
+      setIsLoading(false);
+      return;
+    }
+
+    if (!password) {
+      toast.error("Please enter your password.");
+      setIsLoading(false);
+      return;
+    }
+
+    // Proceed with signup if access code is correct
     try {
-      if (accessCode == "VeriScopeHacks") {
-          console.log("HERE");
-          await signup(email, password);
-          toast.success("Check your email for a confirmation link!");
+      if (accessCode === "VeriScopeHacks") {
+        console.log("HERE");
+        await signup(email, password);
+        toast.success("Check your email for a confirmation link!");
       } else {
         toast.error("Invalid access code.");
       }
@@ -68,7 +82,7 @@ export function SignupForm({ className, ...props }: SignupFormProps) {
           />
         </div>
         <div className="grid gap-1">
-          <Label className="sr-only" htmlFor="email">
+          <Label className="sr-only" htmlFor="password">
             Password
           </Label>
           <Input
@@ -84,8 +98,8 @@ export function SignupForm({ className, ...props }: SignupFormProps) {
           />
         </div>
         <div className="grid gap-1">
-          <Label className="sr-only" htmlFor="email">
-            Password
+          <Label className="sr-only" htmlFor="accessCode">
+            Access Code
           </Label>
           <Input
             id="accessCode"

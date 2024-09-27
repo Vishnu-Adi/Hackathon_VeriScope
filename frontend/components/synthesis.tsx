@@ -98,7 +98,7 @@ export function Synthesis({
     setMessages,
   } = useChat({
     body: {
-      VeriScope,
+      Synthesis,
     },
   });
 
@@ -219,7 +219,7 @@ export function Synthesis({
               }}
             >
               <img
-                src="/synthesis.png"
+                src="/loading_gif.gif"
                 alt="Loading..."
                 className="animate-spin"
                 style={{ height: "8vh", marginBottom: "2vh" }}

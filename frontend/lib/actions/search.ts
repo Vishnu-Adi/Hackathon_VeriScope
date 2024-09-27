@@ -13,7 +13,7 @@ const pineconeClient = new PineconeClient({
 
 export async function globalSearch(query: string) {
   const response = await fetch(
-    "https://synthesis-backend-32ccba375538.herokuapp.com/embed_endpoint",
+    "http://localhost:3000/embed_endpoint",
     {
       method: "POST",
       headers: {
@@ -46,7 +46,7 @@ export async function globalSearch(query: string) {
 
 export async function withinClusterSearch(query: string, clusterId: string) {
   const response = await fetch(
-    "https://synthesis-backend-32ccba375538.herokuapp.com/embed_endpoint",
+    "http://localhost:3000/embed_endpoint",
     {
       method: "POST",
       headers: {

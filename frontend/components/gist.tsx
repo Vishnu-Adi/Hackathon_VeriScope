@@ -185,7 +185,7 @@ export function Gist({ currentClusterID }: { currentClusterID: string }) {
         }}
       >
         <img
-          src="/synthesis.png"
+          src="/loading_gif.gif"
           alt="Loading..."
           className="animate-spin"
           style={{ height: "8vh", marginBottom: "2vh" }}
