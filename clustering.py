@@ -126,28 +126,28 @@ def gen_ai_synthesis(articles, emphasis_on=None):
         }
 
 
-# def gen_ai_fill_details_given_synthesis(cluster, synthesis):
-#     response = client.chat.completions.create(
-#         model="gpt-3.5-turbo",
-#         response_model=models.ArticleData,
-#         messages=[
-#             {
-#                 "role": "system",
-#                 "content": "Extract the key terms, key takeaways, locations, people, events, complexities, and statistics from any given news article.",
-#             },
-#             {
-#                 "role": "user",
-#                 "content": synthesis,
-#             },
-#         ],
-#     )
-#     cluster["key_takeaways"] = response.key_takeaways
-#     cluster["people"] = response.people
-#     cluster["events"] = response.events
-#     cluster["complexities"] = response.complexities
-#     cluster["statistics"] = response.statistics
-#     return cluster
-# cluster["locations"] = response.locations
+def gen_ai_fill_details_given_synthesis(cluster, synthesis):
+    response = client.chat.completions.create(
+        model="gpt-3.5-turbo",
+        response_model=models.ArticleData,
+        messages=[
+            {
+                "role": "system",
+                "content": "Extract the key terms, key takeaways, locations, people, events, complexities, and statistics from any given news article.",
+            },
+            {
+                "role": "user",
+                "content": synthesis,
+            },
+        ],
+    )
+    cluster["key_takeaways"] = response.key_takeaways
+    cluster["people"] = response.people
+    cluster["events"] = response.events
+    cluster["complexities"] = response.complexities
+    cluster["statistics"] = response.statistics
+    return cluster
+cluster["locations"] = response.locations
 
 
 def get_clusters(articles_data=None):
@@ -436,8 +436,8 @@ def get_clusters(articles_data=None):
 
 if __name__ == "__main__":
     get_clusters()
-    # with open("local_vectors.json") as f:
-    #     articles_data = json.load(f)["vectors"][:100]
-    #     with open("small_vectors.json", "w") as g:
-    #         json.dump(articles_data, g)
-    # get_cluster_articles("3db1e0a5-c4c4-41bd-ba54-0f455ec54151")
+    with open("local_vectors.json") as f:
+        articles_data = json.load(f)["vectors"][:100]
+        with open("small_vectors.json", "w") as g:
+            json.dump(articles_data, g)
+    get_cluster_articles("3db1e0a5-c4c4-41bd-ba54-0f455ec54151")

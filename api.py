@@ -231,7 +231,7 @@ class Scraper:
                         # and match["id"] in map(lambda x: x["id"], articles_data)
                     ]
                     for m_id in filtered:
-                        # print("Union", article["id"], m_id)
+                        print("Union", article["id"], m_id)
                         uf.union(article["id"], m_id)
 
                 grouped_articles = defaultdict(list)

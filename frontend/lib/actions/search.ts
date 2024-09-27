@@ -3,7 +3,7 @@
 import fetch from "node-fetch";
 import { PineconeClient } from "pinecone-client";
 
-const apiKey = "a69bc407-de77-4737-b85a-8905630bb045";
+const apiKey = "a012ac3d-6ba2-4ab9-9853-8d1bce4784c0";
 const indexName = "semantic-search";
 
 const pineconeClient = new PineconeClient({

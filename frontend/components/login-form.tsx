@@ -27,7 +27,10 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
 
   async function onSubmit() {
     setIsLoading(true);
-
+    if (!email || !password) {
+      toast.error("Please enter both email and password.");
+      return; // Exit the function early
+    }
     try {
       await login(email, password);
       toast.success("You have successfully logged in.");

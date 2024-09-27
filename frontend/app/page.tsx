@@ -51,7 +51,7 @@ export default function Home() {
                 <div className="font-bold text-lg">Avoid Misinformation.</div>
                 <div>
                   Our AI agent is trained to curate in-demand content for you in
-                  a reliable, unpolarized manner. Don't be fooled by fake news
+                  a reliable, unpolarized manner. Don't be fooled by biased news
                   anymore.
                 </div>
               </div>

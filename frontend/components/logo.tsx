@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from 'next/image'; // Import the Image component
+import Image from 'next/image'; 
 import logo from "../public/synthesis.png";
 
 export function Logo() {
