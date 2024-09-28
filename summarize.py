@@ -1,10 +1,11 @@
-import instructor
+
 from openai import OpenAI
 from pydantic import BaseModel
 import newspaper as n3k
 from dotenv import load_dotenv
 import os
 from models import SummarizeResponse, UnbiasedResponse
+import instructor
 
 load_dotenv()
 
