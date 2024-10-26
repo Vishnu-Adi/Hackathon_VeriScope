@@ -1,4 +1,4 @@
-#!/Users/vishnuadithya/Downloads/synthesis-main/my-venv/bin/python3.12
+#!/Users/vishnuadithya/Downloads/VeriScope/my-venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys
